@@ -5,12 +5,16 @@
   "repository": "git@github.com:FinalDes/graphql-typescript-demo.git",
   "author": "Alex Alonso <alex4551@gmail.com>",
   "license": "MIT",
-  "scripts":{
+  "scripts": {
+    "lint": "eslint -c .eslintrc.json src/**/*.js",
     "start": "node src/index.js"
   },
   "dependencies": {
     "express": "^4.16.2",
     "express-graphql": "^0.6.11",
     "graphql": "^0.11.7"
+  },
+  "devDependencies": {
+    "eslint": "^4.10.0"
   }
 }
