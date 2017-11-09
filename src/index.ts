@@ -5,12 +5,13 @@ import {schema} from "./schema";
 const app = express();
 const port = 4000;
 
+// tslint:disable object-literal-sort-keys
 app.use("/graphql", graphqlHTTP({
     schema,
     graphiql: true,
 }));
 
 app.listen(port, () => {
-    // tslint-disable-next-line no-console
+    // tslint:disable-next-line no-console
     console.log(`GraphQL Server is now running on http://localhost:${port}/graphql`);
 });

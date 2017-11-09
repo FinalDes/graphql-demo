@@ -1,5 +1,5 @@
 import {GraphQLObjectType, GraphQLSchema, GraphQLString} from "graphql";
-
+// tslint:disable object-literal-sort-keys
 const RootQuery = new GraphQLObjectType({
     name: "RootQueryType",
     fields: {
