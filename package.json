@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint -c .eslintrc.json src/**/*.js",
-    "start": "nodemon src/index.js"
+    "start": "nodemon --config nodemon.json"
   },
   "dependencies": {
     "express": "^4.16.2",
