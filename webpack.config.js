@@ -10,20 +10,21 @@ fs.readdirSync("node_modules")
     });
 
 module.exports = {
-    entry: "./src/index.js",
+    entry: "./src/index.ts",
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: "index.js"
+        filename: "index.ts"
+    },
+    resolve: {
+        extensions: [".ts", ".js"],
     },
     externals: nodeModules,
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.ts$/,
                 exclude: /node_modules/,
-                use: {
-                    loader: "babel-loader"
-                }
+                loader: "awesome-typescript-loader",
             }
         ]
     },
